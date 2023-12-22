@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react'
 
 export default function App() {
   let stage = sessionStorage.getItem('data')
-  // let userData = stage || ''
   const [userData, setUserData] = useState(stage ? JSON.parse(stage) : '')
   const navigation = useNavigation()
 
