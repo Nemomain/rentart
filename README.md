@@ -30,8 +30,8 @@
 * Heroku
 * Mern Stack
 
-## [Space-Battle][RentArt] - Fullstack App
-## [Space-Battle Repository][githubrepo] - Application Repository
+## [Rentart][RentArt] - Fullstack App
+## [Rentart Repository][githubrepo] - Application Repository
 
 <!-- links where to find -->
 
