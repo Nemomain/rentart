@@ -28,7 +28,7 @@
 * Dotenv
 * Cloudinary
 * Heroku
-* Mern Stack
+* MERN Stack
 
 ## [Rentart][RentArt] - Fullstack App
 ## [Rentart Repository][githubrepo] - Application Repository
@@ -36,7 +36,9 @@
 <!-- links where to find -->
 
 ## Project Description
-This is a mock platform for renting Art pieces. The idea was not making a realistic service, but working on realistic problems and development that the industry deals with regularly, to showcase we can indeed be useful in any team going forward. Needless to say on the team there was also a love for art, so we had much fun both because we were coding and what we were coding. The platform uses a MERN stack to handle a variety of functionalities including, registering as a user, favoriting artwork, renting the artwork, cancelling a rental, browsing for art and filtering, uploading art if the user is an artist, changing the user information/profile pic etc..
+This is a mock platform for renting Art pieces. The idea was not making a realistic service, but working on realistic problems and development that the industry deals with such as user interface and functionality, browsing and categorising of goods, etc; to showcase we, (GA grads), can indeed be useful in any web development team going forward. 
+
+Needless to say that there was also a love for art  on the team , so we had a great time, enjoying both the coding and what we were working on The platform uses a MERN stack to handle a variety of functionalities including: registering as a user, favoriting artwork, renting the artwork, cancelling a rental, browsing for art and filtering, uploading art if the user is an artist, changing the user information/profile pic etc.
 
 ## Project briefing
 The brief we were handed specified the following:
@@ -117,8 +119,10 @@ Along with a database design:
 
 <img src="client/public/DB.png">
 
+Our organisation was defined on the first day, we created a trello board and defined all the tasks we could think of, and then each one of us took on the responsibility on a single task. I started coding the back-end. Obviously most tasks we had originally defined could be broken down in smaller tasks, or could be dependant on any other number of tasks to be solved first, so all of these would be added to the trello board so all team members could see what the others were up to, and offer or request help with any obstacles faced.
+
 ## Coding/Building Process
-Once we got the go ahead we divided the work, with me being in charge of the backend as a whole. The backend started very simple with a couple of endpoints; just to get the Frontend be able to load some images and be able to log in as a user. Eventually though the Backend grew to what it is at the moment. All the back end is still coded by myself. While I was coding that, my teammates were coding the homepage carousel and the gallery respectively. Once the backend was ready to receive basic requests I coded the user register component, the login component and the profile router (It renders a different profile page depending on the type of user).
+Once we got the go ahead we divided the work, with me being in charge of the backend as a whole. The backend started very simple with a couple of endpoints; just to get the Frontend be able to load some images and be able to log in as a user. Eventually though the Backend grew to what it is at the moment. All the Backend is still coded by myself. While I was coding that, my teammates were coding the homepage carousel and the gallery respectively. Once the backend was ready to receive basic requests I coded the user register component, the login component and the profile router (It renders a different profile page depending on the type of user).
 
 Profile routing component:
 ```javascript
@@ -163,7 +167,7 @@ export default function Profile(){
 ```
 
 Around this time I also insisted on using React-Router-Dom so we could have a neat and organised place to look at our Frontend endpoints and manage them more effectively. I had some experience with it from my previous project in the bootcamp but my teammates didn't, and after a quick explanation they adapted very easily.
- 
+
 Routing with React-Router-Dom:
 
 ```javascript
@@ -218,9 +222,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 ```
 
-Because I was coding the registration, the login, the profile router and 3 profiles it also felt natural that I coded how the sessions worked. The sessions ended up being a huge challenge and I started them from scratch many times, and every time I seemed to have fixed a issue a new one popped up. In the end one of the teachers in the bootcamp came to give me a help with that and with some subtle but crucial changes they finally worked as intended.
+Because I was coding the registration, the login, the profile router and 3 profiles it also felt natural that I coded how the sessions worked. The sessions ended up being a huge challenge and I started them from scratch many times, and every time I seemed to have fixed an issue a new one popped up. In the end one of the teachers in the bootcamp came to give me help with that and with some subtle but crucial changes they finally worked as intended.
 
-The sessions ended up using a mix of sessionStorage, userState(), and React-Router-Dom context (because the outlet component doesen't directly take props, and have to use context instead):
+The sessions ended up using a mix of sessionStorage, userState(), and React-Router-Dom context (because the outlet component doesn't directly take props, and have to use context instead):
+
 
 ```javascript
 import { Outlet, useNavigation } from 'react-router-dom'
@@ -260,7 +265,7 @@ export default function App() {
 }
 ```
 
-Also, because I had dedicated so much effort to the session management the 3 distinct profile pages at that point technically existed, but barely a step above placeholders. I made sure that they were pulling the necessary data from the databese and left syling for later. Once that was ready, I jumped to help my teammates with whatever issue they might be having, by doing this not only I felt that I was pulling my weight as a team player, but we sped up development by turning most problems into speedbumps. I was not completely responsible but had a hand in the favoriting system, the individual art page, public profile, and lesser impact was also had throughout the project. I completely coded the admin search tool(in his profile page) and coded the backend for managing rentals from users, then helped a teammate to code the frontend for that same fuctionality. This is a piece of code I am particularly proud of as it changes 3 fields in 2 different MongoDB collections by sending a single boolean, and also manages errors in what I believe is thought of good practice in the industry.
+Also, because I had dedicated so much effort to the session management, the 3 distinct profile pages at that point technically existed, but barely a step above placeholders. I made sure that they were pulling the necessary data from the database and left styling for later. Once that was ready, I jumped to help my teammates with whatever issue they might be having. By doing this, not only did I feel that I was pulling my weight as a team player, but we also sped up development by turning most problems into speedbumps. I was not completely responsible but had a hand in the favoriting system, the individual art page, public profile, and lesser impact was also had throughout the project. I completely coded the admin search tool (in their profile page) and coded the backend for managing rentals from users, then helped a teammate to code the frontend for that same functionality. This is a piece of code I am particularly proud of as it changes 3 fields in 2 different MongoDB collections by sending a single boolean, and also manages errors in what I believe is thought of good practice in the industry.
 
 ```javascript
 export const rentArt = async (req, res) => {
@@ -313,17 +318,20 @@ export const rentArt = async (req, res) => {
 }
 ```
 
- After that the most crucial part of functionality had already been dealt with, so we focused on managing styling, responsiveness and extra functionality such as uses being able to edit their data etc...
+After that the most crucial part of functionality had already been dealt with, so we focused on managing styling, responsiveness and extra functionality such as users being able to edit their data etc.
 
-## Wins and Challenges(TLDR)
-To be honest, the fact that this project is a miniature version of both social media and online store, and that we managed to include so many little extras in the little time we had is a huge win.
+## Wins and Challenges
+The project being a scaled-down fusion of both a social media platform and an online store, and the successful incorporation of numerous additional features within the limited timeframe, is for me a significant achievement.
 
-As for challenges personally the greatest challenge was the session persistence management. It was a huge learning occasion and I realised the solution was so simple once done, and that maybe I could have arrived by myself if I hadn't been so unwilling to stop smashing my head into the proverbial wall.
+As for challenges, personally the greatest challenge was the session persistence management. It was a huge learning opportunity and I realised the solution was so simple once done, and that maybe I could have done it by myself if I hadn't been so unwilling to stop smashing my head into the proverbial wall.
 
 ## Bugs
+
 There was also a bug which would inconsistently make an API call return a status 304 and fail to load an asset and I almost lost my mind with that one. In the end the reason for it was a missing '/' in the endpoint on the axios call, but the root cause and the why of the inconsistent behavior is still a mystery. I doubted if to include this in the Challeges sections but I feel this is a much more appropriate place.
 
 As always, there were many other minor bugs, but were not that hard to deal with.
 
+Currrently there are no known bugs.
+
 ## Future Improvements/Other considerations
-If I continue to work on this, I will probably add a following / friending system and a messaging system between users. I also have the idea of giving the admin extra privileges to ban people to snoop on the conversations and other fun stuff like that.
+If I decide to further develop this project, I'm considering adding a following/friending system and implementing a messaging feature between users. Additionally, I'm thinking about granting the admin additional privileges, such as the ability to ban users and monitor conversations and other functionality.
